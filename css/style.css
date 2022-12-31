@@ -3752,7 +3752,6 @@ footer .image-divider.fixed-height{
 	justify-content: center;
 	transition: all 200ms ease;
 	height: 220px;
-	min-width: 420px;
 	flex-grow: 1;
 }
 .main-container .steps-container {

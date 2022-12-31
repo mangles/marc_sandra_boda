@@ -8,7 +8,7 @@ fileignoreconfig:
 - filename: css/fonts/fontello/css/fontello-codes.css
   checksum: d214da712e2104d3935a4e0918f5f71f71595cbe866ef719028f6a5d0e612ab3
 - filename: css/fonts/fontello/css/fontello-embedded.css
-  checksum: 592551b4ff34095dcf878dd4e449b6333e40f76bfdcccbc297fb93106aad73e2
+  checksum: 3335bf37edc8889d00ab387dd12011d3b0845fd1d088f18204933ca2d7f058e6
 - filename: css/fonts/fontello/css/fontello-ie7-codes.css
   checksum: c3a7d1c23b7a16df9f15b803a74ab8d277b95d1798ff1541aaaa491824e0ca71
 - filename: css/fonts/fontello/css/fontello-ie7.css

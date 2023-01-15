@@ -3863,3 +3863,137 @@ footer .image-divider.fixed-height{
 	}
 }
 
+
+.date {
+	background: #f0394d;
+	display: inline-block;
+	color: #fff;
+	padding: 10px;
+	position: absolute;
+	top: 0;
+	right: 0;
+}
+
+.timeline-img-header {
+	height: 200px;
+	position: relative;
+	margin-bottom: 20px;
+}
+.timeline-img-header h2 {
+	position: absolute;
+	bottom: 5px;
+	left: 20px;
+}
+
+
+
+.container-timeline {
+	display: flex;
+	flex-wrap: wrap;
+	max-width: 970px;
+	margin: 0 auto;
+}
+.single-box {
+	display: flex;
+	flex-wrap: nowrap;
+	justify-content: center;
+	width: 100%;
+}
+.date-area {
+	display: flex;
+	background: linear-gradient(to right, #FFFFFF 45%, #6a6a6a 45%, #6a6a6a 45%, #FFFFFF 50%);
+	order: 2;
+	text-align: center;
+	color: #fff;
+	font-size: 28px;
+	flex-basis: 100px;
+}
+.date-area>span {
+	font-size: 20px;
+	line-height: 70px;
+	margin: auto;
+	background: #f0394d;
+	width: 70px;
+	height: 70px;
+	border-radius: 50%;
+}
+.content-timeline {
+	text-align: center;
+	border-radius: 25px;
+	color: #858585;
+	order: 3;
+	width: 80%;
+	padding: 20px 20px 20px 10px;
+	background: #fff;
+}
+.content-timeline {
+	margin-bottom: 3%;
+}
+.content-timeline h2 {
+	margin: 0;
+	font-size: 14px;
+	text-transform: uppercase;
+}
+.content-timeline h3 {
+	margin: 5px;
+	font-size: 14px;
+	color: #000;
+}
+@media (min-width: 640px) {
+	.content-timeline, .custom {
+		width: 40%;
+	}
+	.box-right .content-timeline {
+		order: 1;
+		padding-right: 10px;
+		border-radius: 25px;
+	}
+	.box-right .custom {
+		order: 3;
+	}
+}
+
+
+body {
+	margin: 0;
+	font-family: sans-serif;
+}
+#c {
+	width: 100%;  /* let our container decide our size */
+	height: 100%;
+	display: block;
+}
+#container {
+	position: relative;  /* makes this the origin of its children */
+	width: 100vw;
+	height: 100vh;
+	overflow: hidden;
+}
+#labels {
+	position: absolute;  /* let us position ourself inside the container */
+	z-index: 0;          /* make a new stacking context so children don't sort with rest of page */
+	left: 0;             /* make our position the top left of the container */
+	top: 0;
+	color: white;
+}
+#labels>div {
+	position: absolute;  /* let us position them inside the container */
+	left: 0;             /* make their default position the top left of the container */
+	top: 0;
+	cursor: pointer;     /* change the cursor to a hand when over us */
+	font-size: small;
+	user-select: none;   /* don't let the text get selected */
+	pointer-events: none;  /* make us invisible to the pointer */
+	text-shadow:         /* create a black outline */
+			-1px -1px 0 #000,
+			0   -1px 0 #000,
+			1px -1px 0 #000,
+			1px  0   0 #000,
+			1px  1px 0 #000,
+			0    1px 0 #000,
+			-1px  1px 0 #000,
+			-1px  0   0 #000;
+}
+#labels>div:hover {
+	color: red;
+}

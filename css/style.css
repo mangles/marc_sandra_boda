@@ -2537,7 +2537,7 @@ form .has-error .btn-primary{
 
 .simple-countdown .countdown-amount {
 	display:inline-block;
-	font-size:18px;
+	font-size:32px;
 	letter-spacing:2px;
 }
 .simple-countdown .countdown-period {

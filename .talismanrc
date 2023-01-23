@@ -45,6 +45,8 @@ fileignoreconfig:
   checksum: 777b44891f7e407a3b40e22d3695373c240f9c7f47c8be15447a4ba82896aef1
 - filename: js/waypoint/trash/noframework.waypoints.min.js
   checksum: 68dbf257368f98c4dd22044b4d98934184a53b6dea58f4b4713f1967b218cc4f
+- filename: location.html
+  checksum: 7eafe5db5c0cef5b8cffed914139ab31cd2d2851742fa7d7ca52fdc33dc1d602
 - filename: page.html
   checksum: 5c3091fa46061649c0a904d16378b4a37c6af7890e88622c7bff1c65435073c3
 version: "1.0"

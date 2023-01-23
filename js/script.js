@@ -337,10 +337,10 @@ $(document).ready(function() {
 	//===================================================================================
 	var theday = new Date();
 	theday = new Date(2023, 7, 29);
-	$('#countdown').countdown({until: theday, format: 'WDHMS'});
+	$('#countdown').countdown({until: theday, format: 'DHMS'});
 	$('#countdown').countdown($.countdown.regionalOptions['custom-label']);
 
-	$('#date-countdown').countdown({until: theday, format: 'WDHMS'});
+	$('#date-countdown').countdown({until: theday, format: 'DHMS'});
 
 	// 08. MOBILE MENU
 	//==================================================================================

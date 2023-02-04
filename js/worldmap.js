@@ -47,27 +47,14 @@ function worldmap() {
     }
 
     location_set.hover(over, out); 	//Adds event handlers for hovering over the element
-    location_set.click(click);
+    location_set.ontouchstart(over)
+    location_set.ontouchend(out)
 
     // *********************************************Functions *********************************************
 
     function over() {
         // this.attr({'stroke-width': 3});
         image_array[this.id] = paper.image('images/viatges/' + this.img + '.jpg', this.x + 8, this.y - 260, 250, 200).scale(scale, scale, 0, 0);
-    }
-
-    function click() {
-        if (this.visible === false) {
-            this.attr({'stroke-width': 3});
-            image_array[this.id] = paper.image('images/viatges/' + this.img + '.jpg', this.x + 8, this.y - 260, 250, 200).scale(scale, scale, 0, 0);
-            this.visible = true;
-
-        } else {
-            this.attr({'stroke-width': 2});
-            image_array[this.id].remove();
-            this.visible = false;
-
-        }
     }
 
     function out() {

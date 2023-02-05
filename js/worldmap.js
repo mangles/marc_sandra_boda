@@ -126,7 +126,7 @@ var locations = {
         lat: 59.3293,
         lng: 18.0686,
         color: 'orange',
-        img: 'estocolm',
+        img: 'estocolm1',
         url: '',
         visible: false
     },
@@ -145,6 +145,15 @@ var locations = {
         lng: 178.0650,
         color: 'green',
         img: 'ens-ajudes',
+        url: '',
+        visible: false
+    },
+    7: {
+        name: 'Paris',
+        lat: 48.8566,
+        lng: 2.3522,
+        color: 'maroon',
+        img: 'paris3',
         url: '',
         visible: false
     }

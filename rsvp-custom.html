@@ -133,7 +133,7 @@
                                         	<span class="white-line"></span>
                                    		</div>
 
-                                        <p>Ens encantaria que formessis part d'aquest dia tant especial amb nosaltres
+                                        <p>Ens encantaria celebrar amb tu aquesta nova aventura
 										</p>
                                     </div>
 
@@ -150,7 +150,7 @@
             <!-- MAIN SLIDER IMAGES -->
   			<div class="slides">
     				<!-- SLIDE IMAGE -->
-                	<div data-stellar-ratio="0.5" class="slide-image" style="background-image:url(images/estocolm1.JPG);">
+                	<div data-stellar-ratio="0.5" class="slide-image" style="background-image:url(images/viatges/estocolm1.JPG);">
                     </div>
 
                     <div class="slide-overlay" style="opacity:0.2"> </div>
@@ -172,7 +172,7 @@
 
         	<!-- CONTAINER -->
 			<div class="container">
-                <form method="post" action="rsvp.php" id="rsvpform">
+                <form method="post" id="rsvpform">
                 <!--TEXT SECTION-->
                 <div class="row">
                 	<div id="message" class="col-md-offset-2 col-md-8 message">
@@ -204,15 +204,15 @@
 
 									<div class="radio">
 										<label class="btn btn-primary no-icon">
-											<input type="radio" name="optionsRadiosCustom" id="optionsRadiosCustom1" value="option1" checked>
+											<input type="radio" name="optionsRadiosCustom" id="vindras-boda" value="Si" checked>
 											I tant, no m'ho perdria per res del món!
 										</label>
 									</div>
 
 									<div class="radio">
 										<label class="btn btn-primary no-icon" >
-											<input type="radio" name="optionsRadiosCustom" id="optionsRadiosCustom2" value="option2">
-											No puc, ho sento :(
+											<input type="radio" name="optionsRadiosCustom" id="optionsRadiosCustom2" value="No">
+											No puc, tinc zumba :(
 										</label>
 									</div>
 
@@ -222,8 +222,8 @@
 
 						<!-- Quants sereu -->
 						<div class="form-group">
-							<label>Quants sereu?</label>
-							<div id="input-radio-inline" class="ajax-input ajax-radio" data-required="Please Fill All Field." data-output-label="Output Radio - Inline">
+							<label>Quants adults sereu?</label>
+							<div id="quants-sereu" class="ajax-input ajax-radio" data-required="Please Fill All Field." data-output-label="Output Radio - Inline">
 								<label class="radio-inline option-label">
 									<input type="radio" name="optionsRadiosInline" id="inlineRadio1" value="option1"> 1
 								</label>
@@ -245,33 +245,88 @@
 							</div>
 						</div>
 
+						<div class="form-group">
+							<label>Portes mainada?</label>
+							<div id="quants-nens-sereu" class="ajax-input ajax-radio" data-required="Please Fill All Field." data-output-label="Output Radio - Inline">
+								<label class="radio-inline option-label">
+									<input type="radio" name="optionsRadiosInline" id="nens1" value="option1"> 1
+								</label>
+								<label class="radio-inline option-label">
+									<input type="radio" name="optionsRadiosInline" id="nens2" value="option2"> 2
+								</label>
+								<label class="radio-inline option-label">
+									<input type="radio" name="optionsRadiosInline" id="nens3" value="option3"> Nah, els aparco amb els avis
+								</label>
+							</div>
+						</div>
+
 						<!-- SELECT OPTIONS -->
 						<div class="form-group">
 							<label for="input-select">Preferències alimentàries</label>
 							<select id="input-select" class="form-control ajax-input" data-required="Please Fill All Field." data-output-label="Output Select Options">
 								<option disabled selected>Seleciona</option>
-								<option>Menjo de tot</option>
-								<option>Vegà</option>
+								<option>M'ho menjo tot</option>
+								<option>No menjo carn</option>
 								<option>Vegetarià</option>
-								<option>Vegetarià (Ovo-lacto)</option>
-								<option>Vegetarià (Pescetaria)</option>
+								<option>Vegà</option>
 							</select>
 						</div>
 
 						<!-- Alergies -->
 						<div class="form-group">
-							<label for="input-textarea">Al·lèrgies i intoleràncies alimentàries</label>
-							<textarea id="input-textarea" class="form-control ajax-input" placeholder="" rows="14" data-required="Please Fill All Field." data-output-label="Output Textarea"></textarea>
+							<label for="alergies">Al·lèrgies i intoleràncies alimentàries</label>
+							<textarea id="alergies" class="form-control ajax-input" placeholder="" rows="6" data-required="Please Fill All Field." data-output-label="Output Textarea"></textarea>
 						</div>
 
-						<!-- Altres -->
 						<div class="form-group">
-							<label for="input-textarea">Alguna altra cosa a comunicar?</label>
-							<textarea id="input-textarea2" class="form-control ajax-input" placeholder="" rows="14" data-required="Please Fill All Field." data-output-label="Output Textarea"></textarea>
+							<label>Havíem dit que la nit és llarga i la casa té molts llits. T'hi quedes a dormir?</label>
+							<div id="dormir-input-radio-custom" class="ajax-input ajax-radio" data-required="Please Fill All Field." data-output-label="Output Radio Custom - 1">
+								<div data-toggle="buttons">
+
+									<div class="radio">
+										<label class="btn btn-primary no-icon">
+											<input type="radio" name="optionsRadiosCustom" id="dormir-si" value="Si" checked>
+											I'm in!
+										</label>
+									</div>
+
+									<div class="radio">
+										<label class="btn btn-primary no-icon" >
+											<input type="radio" name="optionsRadiosCustom" id="dormir-no" value="No">
+											Millor no, em faig pipí al llit
+										</label>
+									</div>
+
+								</div>
+							</div>
+						</div>
+
+						<div class="form-group">
+							<label>Això és una boda gitana: l'endemà farem paellada 🥘</label>
+							<div id="paella-input-radio-custom" class="ajax-input ajax-radio" data-required="Please Fill All Field." data-output-label="Output Radio Custom - 1">
+								<div data-toggle="buttons">
+
+									<div class="radio">
+										<label class="btn btn-primary no-icon">
+											<input type="radio" name="optionsRadiosCustom" id="paella-si" value="Si" checked>
+											I'm in també!
+										</label>
+									</div>
+
+									<div class="radio">
+										<label class="btn btn-primary no-icon" >
+											<input type="radio" name="optionsRadiosCustom" id="paella-no" value="No">
+											No, sóc més de fideuà
+										</label>
+									</div>
+
+								</div>
+							</div>
 						</div>
 
 
-                        <div class="form-group">
+
+						<div class="form-group">
     						<input type="submit" id="submitButton"  name="submitButton" class="button medium reverse" value="ENVIAR" style="width:100%;">
  						</div>
 
@@ -361,7 +416,8 @@
         <!-- Owl Carousel -->
         <script src="js/owlcarousel/owl.carousel.js"></script>
         <!-- RSVP -->
-        <script src="js/rsvp/rsvp.js"></script>
+<!--        <script src="js/rsvp/rsvp.js"></script>-->
+			<script src="js/rsvp/rsvp_custom.js"></script>
 
         <!-- Custom Core Script -->
         <script type="text/javascript" src="js/script.js"></script>

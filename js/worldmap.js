@@ -53,8 +53,14 @@ function worldmap() {
     // *********************************************Functions *********************************************
 
     function over() {
-        // this.attr({'stroke-width': 3});
-        image_array[this.id] = paper.image('images/viatges/' + this.img + '.jpg', this.x + 8, this.y - 260, 250, 200).scale(scale, scale, 0, 0);
+        this.attr({'stroke-width': 3});
+        if (this.id === 8) {
+            image_array[this.id] = paper.image('images/viatges/' + this.img + '.jpg', this.x - 200, this.y - 260, 250, 200).scale(scale, scale, 0, 0);
+
+        } else {
+            image_array[this.id] = paper.image('images/viatges/' + this.img + '.jpg', this.x + 8, this.y - 260, 250, 200).scale(scale, scale, 0, 0);
+
+        }
     }
 
     function out() {

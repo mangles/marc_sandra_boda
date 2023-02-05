@@ -416,13 +416,6 @@ $(document).ready(function() {
 		}
 	}
 
-
-	// 11. RSVP
-	//==================================================================================
-	if ($("#rsvpform").length){
-		$("#rsvpform").ajaxrsvp();
-	}
-
 	// 11.1 Custom Checkbox
 	//----------------------------------------------------------------------------------
 	$(".ajax-checkbox .custom-option-icon").click(function(){

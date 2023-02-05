@@ -1,25 +1,31 @@
-const url = 'https://script.google.com/macros/s/AKfycbx-jkAXf1aALG07n4k7sA0Av_2UFywJq9LEvAYiCu1aVQRKY0UanDqTfyk0655zHEGk/exec';
+const url = 'https://script.google.com/macros/s/AKfycbyZZiYyV17R1B-pMHaQKNj3SaGsEPSB8rlfnRZEKSh4t_-gUl14JlCUyT1t1H7nBCC0/exec';
 const myForm = document.querySelector("#rsvpform");
-const name = document.querySelector("#inputname");
-const email = document.querySelector("#input-email-icon");
-const vindrasBoda = document.querySelector("#vindras-boda");
-const quantsSereu = document.querySelector("#quants-sereu");
-const preferenciesAlimentaries = document.querySelector("#input-select");
-const alergies = document.querySelector("#alergies");
-const altres = document.querySelector("#altres");
+
 
 myForm.addEventListener('submit', submitter);
 
 function submitter(e) {
+    const name = document.querySelector("#inputname");
+    const email = document.querySelector("#input-email-icon");
+    const vindrasBoda = document.querySelector("input[name=vindrasBoda]:checked");
+    const quantsSereu = document.querySelector("input[name=quantsSereu]:checked");
+    const mainada = document.querySelector("input[name=mainada]:checked");
+    const preferenciesAlimentaries = document.querySelector("#preferencies-alimentaries");
+    const alergies = document.querySelector("#alergies");
+    const dormir = document.querySelector("input[name=dormir]:checked");
+    const paella = document.querySelector("input[name=paella]:checked");
+
     e.preventDefault()
     const messageObject = {
-        name: name.value,
+        nom: name.value,
         email: email.value,
         vindrasBoda: vindrasBoda.value,
         quantsSereu: quantsSereu.value,
+        mainada: mainada.value,
         preferenciesAlimentaries: preferenciesAlimentaries.value,
         alergies: alergies.value,
-        altres: altres.value
+        dormir: dormir.value,
+        paella: paella.value
     }
     sendEmail(messageObject)
 }

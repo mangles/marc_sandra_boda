@@ -40,7 +40,7 @@ fileignoreconfig:
 - filename: js/modernizr/modernizr.js
   checksum: c138f9578b389f3878bb634c7fbe6c16866d02ae39bb9f71e229cc53d3bdebb1
 - filename: js/rsvp/rsvp_custom.js
-  checksum: 805706c7de3cd60752da89e4bbbc131e4da0f7bde64f0607a4111a0cb6ac547a
+  checksum: 173d4c5fc7f7468c044903bdd022f42ff194c76ce3c239be3283a29d81b9bc71
 - filename: js/waypoint/jquery.waypoints.min.js
   checksum: 781b51211e572147f45f584145e7bb8d1cdb2fd03061b40c84d01915f28cc397
 - filename: js/waypoint/noframework.waypoints.min.js

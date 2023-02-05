@@ -150,7 +150,7 @@
             <!-- MAIN SLIDER IMAGES -->
   			<div class="slides">
     				<!-- SLIDE IMAGE -->
-                	<div data-stellar-ratio="0.5" class="slide-image" style="background-image:url(images/viatges/estocolm1.jpg);">
+                	<div data-stellar-ratio="0.5" class="slide-image" style="background-image:url(images/viatges/estocolm1.jpg);background-position: 0 30%">
                     </div>
 
                     <div class="slide-overlay" style="opacity:0.2"> </div>
@@ -172,7 +172,7 @@
 
         	<!-- CONTAINER -->
 			<div class="container">
-                <form method="post" id="rsvpform">
+                <form method="post" id="rsvpform" onsubmit="window.location.replace('https://www.lobeswedding.com')">
                 <!--TEXT SECTION-->
                 <div class="row">
                 	<div id="message" class="col-md-offset-2 col-md-8 message">
@@ -199,19 +199,18 @@
 						<!-- Vindras? -->
 						<div class="form-group">
 							<label>Vindràs a la boda?</label>
-							<div id="input-radio-custom" class="ajax-input ajax-radio" data-required="Please Fill All Field." data-output-label="Output Radio Custom - 1">
-								<div data-toggle="buttons">
-
+							<div class="ajax-input ajax-radio" data-required="Please Fill All Field." data-output-label="Output Radio Custom - 1">
+								<div data-toggle="buttons" id="vindras-boda">
 									<div class="radio">
 										<label class="btn btn-primary no-icon">
-											<input type="radio" name="optionsRadiosCustom" id="vindras-boda" value="Si" checked>
+											<input type="radio" name="vindrasBoda" id="vindras-boda-si" value="Si" checked>
 											I tant, no m'ho perdria per res del món!
 										</label>
 									</div>
 
 									<div class="radio">
 										<label class="btn btn-primary no-icon" >
-											<input type="radio" name="optionsRadiosCustom" id="optionsRadiosCustom2" value="No">
+											<input type="radio" name="vindrasBoda" id="vindras-boda-no" value="No">
 											No puc, tinc zumba :(
 										</label>
 									</div>
@@ -225,45 +224,48 @@
 							<label>Quants adults sereu?</label>
 							<div id="quants-sereu" class="ajax-input ajax-radio" data-required="Please Fill All Field." data-output-label="Output Radio - Inline">
 								<label class="radio-inline option-label">
-									<input type="radio" name="optionsRadiosInline" id="inlineRadio1" value="option1"> 1
+									<input type="radio" name="quantsSereu" id="inlineRadio1" value="1" checked> 1
 								</label>
 								<label class="radio-inline option-label">
-									<input type="radio" name="optionsRadiosInline" id="inlineRadio2" value="option2"> 2
+									<input type="radio" name="quantsSereu" id="inlineRadio2" value="2"> 2
 								</label>
 								<label class="radio-inline option-label">
-									<input type="radio" name="optionsRadiosInline" id="inlineRadio3" value="option3"> 3
+									<input type="radio" name="quantsSereu" id="inlineRadio3" value="3"> 3
 								</label>
 								<label class="radio-inline option-label">
-									<input type="radio" name="optionsRadiosInline" id="inlineRadio4" value="option4"> 4
+									<input type="radio" name="quantsSereu" id="inlineRadio4" value="4"> 4
 								</label>
 								<label class="radio-inline option-label">
-									<input type="radio" name="optionsRadiosInline" id="inlineRadio5" value="option5"> 5
+									<input type="radio" name="quantsSereu" id="inlineRadio5" value="5"> 5
 								</label>
 								<label class="radio-inline option-label">
-									<input type="radio" name="optionsRadiosInline" id="inlineRadio6" value="option6"> 6
+									<input type="radio" name="quantsSereu" id="inlineRadio6" value="6"> 6
 								</label>
 							</div>
 						</div>
 
 						<div class="form-group">
 							<label>Portes mainada?</label>
-							<div id="quants-nens-sereu" class="ajax-input ajax-radio" data-required="Please Fill All Field." data-output-label="Output Radio - Inline">
+							<div id="mainada" class="ajax-input ajax-radio" data-output-label="Output Radio - Inline">
 								<label class="radio-inline option-label">
-									<input type="radio" name="optionsRadiosInline" id="nens1" value="option1"> 1
+									<input type="radio" name="mainada" id="nens0" value="0" checked> 0
 								</label>
 								<label class="radio-inline option-label">
-									<input type="radio" name="optionsRadiosInline" id="nens2" value="option2"> 2
+									<input type="radio" name="mainada" id="nens1" value="1"> 1
 								</label>
 								<label class="radio-inline option-label">
-									<input type="radio" name="optionsRadiosInline" id="nens3" value="option3"> Nah, els aparco amb els avis
+									<input type="radio" name="mainada" id="nens2" value="2"> 2
+								</label>
+								<label class="radio-inline option-label">
+									<input type="radio" name="mainada" id="nens3" value="0"> Nah, els aparco amb els avis
 								</label>
 							</div>
 						</div>
 
 						<!-- SELECT OPTIONS -->
 						<div class="form-group">
-							<label for="input-select">Preferències alimentàries</label>
-							<select id="input-select" class="form-control ajax-input" data-required="Please Fill All Field." data-output-label="Output Select Options">
+							<label for="preferencies-alimentaries">Preferències alimentàries</label>
+							<select id="preferencies-alimentaries" class="form-control ajax-input" data-required="Please Fill All Field." data-output-label="Output Select Options">
 								<option disabled selected>Seleciona</option>
 								<option>M'ho menjo tot</option>
 								<option>No menjo carn</option>
@@ -285,14 +287,14 @@
 
 									<div class="radio">
 										<label class="btn btn-primary no-icon">
-											<input type="radio" name="optionsRadiosCustom" id="dormir-si" value="Si" checked>
+											<input type="radio" name="dormir" id="dormir-si" value="Si" checked>
 											I'm in!
 										</label>
 									</div>
 
 									<div class="radio">
 										<label class="btn btn-primary no-icon" >
-											<input type="radio" name="optionsRadiosCustom" id="dormir-no" value="No">
+											<input type="radio" name="dormir" id="dormir-no" value="No">
 											No, ja em busco la vida
 										</label>
 									</div>
@@ -308,14 +310,14 @@
 
 									<div class="radio">
 										<label class="btn btn-primary no-icon">
-											<input type="radio" name="optionsRadiosCustom" id="paella-si" value="Si" checked>
+											<input type="radio" name="paella" id="paella-si" value="Si" checked>
 											I'm in també!
 										</label>
 									</div>
 
 									<div class="radio">
 										<label class="btn btn-primary no-icon" >
-											<input type="radio" name="optionsRadiosCustom" id="paella-no" value="No">
+											<input type="radio" name="paella" id="paella-no" value="No">
 											No, sóc més de fideuà
 										</label>
 									</div>
@@ -339,43 +341,6 @@
            	</div><!-- END of CONTAINER -->
 
         </section> <!--END of CONTENT SECTION-->
-
-
-        <!-- FOOTER SECTION -->
-		<footer>
-            <div class="image-divider fixed-height" style="background-image:url(images/zanzibar.jpg); height:400px" data-stellar-background-ratio="0.5" >
-
-                <div class="divider-overlay"></div>
-
-                <!-- Use Center Middle Alignment to align middle the content for fixed-height parallax -->
-                <div class="alignment">
-                   	<div class="v-align center-middle">
-
-                    	<!-- HEART DIVIDER & COUPLE NAME -->
-                    	<div class="container">
-                    		<div class="row">
-                        		<div class="col-md-12">
-
-                        			<div class="heart-divider animation delay1 fadeInUp">
-                        				<span class="white-line"></span>
-                        				<i class="de-icon-heart pink-heart"></i>
-                        				<i class="de-icon-heart white-heart"></i>
-                        				<span class="white-line"></span>
-                        			</div>
-
-									<div id="footer-couple-name" class="animation delay1 fadeInUp">
-                                		SANDRA i MARC
-                                	</div>
-
-                     			</div>
-                     		</div>
-                     	</div><!-- END of HEART DIVIDER & COUPLE NAME -->
-
-                    </div>
-				</div><!-- END of Center Middle Alignment -->
-
-			</div>
-		</footer><!-- END of FOOTER SECTION -->
 
 		<!-- jQuery -->
     	<script src="js/jquery-1.11.1.min.js"></script>

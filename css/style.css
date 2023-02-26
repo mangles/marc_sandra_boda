@@ -4009,8 +4009,8 @@ body {
 .wrapper .center-line{
 	position: absolute;
 	height: 100%;
-	width: 4px;
-	background: #fff;
+	width: 1px;
+	background: black;
 	left: 50%;
 	top: 20px;
 	transform: translateX(-50%);
@@ -4025,28 +4025,12 @@ body {
 	justify-content: flex-end;
 }
 .wrapper .row section{
-	background: #fff;
 	border-radius: 5px;
 	width: calc(50% - 40px);
 	padding: 20px;
 	position: relative;
 }
-.wrapper .row section::before{
-	position: absolute;
-	content: "";
-	height: 15px;
-	width: 15px;
-	background: #fff;
-	top: 28px;
-	z-index: -1;
-	transform: rotate(45deg);
-}
-.row-1 section::before{
-	right: -7px;
-}
-.row-2 section::before{
-	left: -7px;
-}
+
 .row section .icon,
 .center-line .scroll-icon{
 	position: absolute;

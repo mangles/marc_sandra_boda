@@ -8,7 +8,6 @@ function submitter(e) {
     const name = document.querySelector("#inputname");
     const email = document.querySelector("#input-email-icon");
     const vindrasBoda = document.querySelector("input[name=vindrasBoda]:checked");
-    const quantsSereu = document.querySelector("input[name=quantsSereu]:checked");
     const mainada = document.querySelector("input[name=mainada]:checked");
     const preferenciesAlimentaries = document.querySelector("#preferencies-alimentaries");
     const alergies = document.querySelector("#alergies");
@@ -20,7 +19,7 @@ function submitter(e) {
         nom: name.value,
         email: email.value,
         vindrasBoda: vindrasBoda.value,
-        quantsSereu: quantsSereu.value,
+        quantsSereu: 1,
         mainada: mainada.value,
         preferenciesAlimentaries: preferenciesAlimentaries.value,
         alergies: alergies.value,

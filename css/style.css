@@ -4062,7 +4062,16 @@ body {
 .row section .bottom{
 	display: flex;
 	align-items: center;
-	justify-content: space-between;
+}
+
+.justify-end {
+	justify-content: flex-end;
+	text-align: start;
+
+}
+.justify-start {
+	justify-content: flex-start;
+	text-align: start;
 }
 .row section .details .title{
 	font-size: 16px;
@@ -4090,6 +4099,12 @@ body {
 }
 
 @media(max-width: 790px){
+
+	.row section .details,
+	.row section .bottom{
+		justify-content: space-between;
+	}
+
 	.wrapper .center-line{
 		left: 40px;
 	}

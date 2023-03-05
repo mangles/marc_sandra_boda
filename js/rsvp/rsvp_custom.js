@@ -31,7 +31,6 @@ function submitter(e) {
     const dormir = document.querySelector("input[name=dormir]:checked");
     const paella = document.querySelector("input[name=paella]:checked");
 
-
     e.preventDefault()
     const messageObject = {
         nom: name.value,
@@ -41,8 +40,8 @@ function submitter(e) {
         mainada: mainada.value,
         preferenciesAlimentaries: preferenciesAlimentaries.value,
         alergies: alergies.value,
-        dormir: dormir.value,
-        paella: paella.value
+        dormir: dormir?.value || "No",
+        paella: paella?.value || "No"
     }
     sendEmail(messageObject)
 }

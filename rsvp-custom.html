@@ -230,7 +230,7 @@
 							<label>Portes mainada?</label>
 							<div id="mainada" class="ajax-input ajax-radio" data-output-label="Output Radio - Inline">
 								<label class="radio-inline option-label">
-									<input type="radio" name="mainada" id="nens0" value="0" checked> 0
+									<input type="radio" name="mainada" id="nens0" value="0"> 0
 								</label>
 								<label class="radio-inline option-label">
 									<input type="radio" name="mainada" id="nens1" value="1"> 1
@@ -262,7 +262,7 @@
 							<textarea id="alergies" class="form-control ajax-input" placeholder="" rows="6" data-required="Please Fill All Field." data-output-label="Output Textarea"></textarea>
 						</div>
 
-						<div class="form-group">
+						<div class="form-group" id="section-dormir" style="display:none">
 							<label>Havíem dit que la nit és llarga i la casa té molts llits. T'hi quedes a dormir?</label>
 							<div id="dormir-input-radio-custom" class="ajax-input ajax-radio" data-required="Please Fill All Field." data-output-label="Output Radio Custom - 1">
 								<div data-toggle="buttons">
@@ -285,7 +285,7 @@
 							</div>
 						</div>
 
-						<div class="form-group">
+						<div class="form-group" id="section-paellada" style="display: none">
 							<label>... i l'endemà, piscina i paellada 🥘</label>
 							<div id="paella-input-radio-custom" class="ajax-input ajax-radio" data-required="Please Fill All Field." data-output-label="Output Radio Custom - 1">
 								<div data-toggle="buttons">
@@ -363,8 +363,8 @@
         <!-- Owl Carousel -->
         <script src="js/owlcarousel/owl.carousel.js"></script>
         <!-- RSVP -->
-<!--        <script src="js/rsvp/rsvp.js"></script>-->
-			<script src="js/rsvp/rsvp_custom.js"></script>
+
+		<script src="js/rsvp/rsvp_custom.js"></script>
 
         <!-- Custom Core Script -->
         <script type="text/javascript" src="js/script.js"></script>

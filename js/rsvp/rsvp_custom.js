@@ -39,7 +39,7 @@ function submitter(e) {
         quantsSereu: 1,
         mainada: mainada.value,
         preferenciesAlimentaries: preferenciesAlimentaries.value,
-        alergies: alergies?.value || "",
+        alergies: alergies?.value || "No",
         dormir: dormir?.value || "No",
         paella: paella?.value || "No"
     }

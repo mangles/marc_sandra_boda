@@ -46,12 +46,15 @@ function submitter(e) {
     sendEmail(messageObject)
 }
 
-function sendEmail(data) {
-    fetch(url, {
+async function sendEmail(data) {
+    await fetch(url, {
         method: 'POST',
         body: JSON.stringify(data)
-    }).then(res => res.json()).then(json => {
-        console.log(json)
-    }).catch(e => console.log(e))
+    }).then((response) => {
+        response.json()
+        window.location.replace('https://www.lobeswedding.com')
+    }).catch((error) => {
+        console.error("Error:", error);
+    });
 
 }

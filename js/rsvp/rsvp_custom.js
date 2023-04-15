@@ -4,6 +4,7 @@ const myForm = document.querySelector("#rsvpform");
 let mainadaSelection = undefined;
 let edatSelection = undefined;
 const edat = document.querySelector("#edat");
+const submitButton = document.getElementById("submitButton");
 
 edat.addEventListener('input', () => {
     edatSelection = edat.value
@@ -17,6 +18,11 @@ document.querySelector("#mainada").addEventListener('click', function (event) {
             document.querySelector("#section-paellada").style.display = 'block'
         }
     }
+});
+
+submitButton.addEventListener("click", function() {
+    submitButton.style.backgroundColor = "#f0394d8c";
+    submitButton.value = "ENVIANT...";
 });
 
 myForm.addEventListener('submit', submitter);
@@ -52,7 +58,12 @@ async function sendEmail(data) {
         body: JSON.stringify(data)
     }).then((response) => {
         response.json()
-        window.location.replace('https://www.lobeswedding.com')
+        // window.location.replace('https://www.lobeswedding.com')
+        submitButton.value = "Moltes gràcies!";
+        submitButton.style.backgroundColor = "#66c468";
+        submitButton.style.borderColor = "#66c468";
+        myForm.reset()
+
     }).catch((error) => {
         console.error("Error:", error);
     });

@@ -34,6 +34,10 @@
 
     <!-- Theme CSS -->
     <link href="css/style.css" rel="stylesheet" media="screen">
+    <!-- Theme CSS -->
+    <link href="css/style.css" rel="stylesheet" media="screen">
+    <script src="js/raphael-min.js"></script>
+    <script src="js/worldmap.js"></script>
 
     <!-- Skin CSS -->
     <!-- <link href="css/skin/light-teal/light-teal.css" rel="stylesheet" media="screen"> -->
@@ -64,7 +68,6 @@
 
 </div> <!--END of PRELOADER-->
 
-
 <!-- NAVIGATION -->
 <header id="nav-header">
     <nav id="nav-bar" class="top-bar fluid-width transparent nav-center sticky-nav animation fadeInDown">
@@ -91,19 +94,6 @@
                 -->
             </div>
             <!-- END of LOGO -->
-
-            <div id="mobile-nav">
-                <i class="de-icon-menu"></i>
-            </div>
-
-            <ul id="nav-menu">
-                <li class="first-child" style="padding-left: 20px;">
-                    <a href="location.html">BODA</a>
-                </li>
-                <li class="first-child split-margin">
-                    <a href="gift.html">SOUVENIRS</a>
-                </li>
-            </ul>
 
             <div class="clearboth"></div>
 
@@ -171,24 +161,6 @@
 
         </li>
 
-
-        <!--   				<li>-->
-        <!--      				&lt;!&ndash; SLIDE IMAGE &ndash;&gt;-->
-        <!--                    <div data-stellar-ratio="0.5" class="slide-image" style="background-image:url(images/anell.jpeg);">-->
-        <!--					</div>-->
-
-        <!--                    &lt;!&ndash; SLIDE OVERLAY &ndash;&gt;-->
-        <!--                    <div class="slide-overlay" style="opacity:0.2"> </div>-->
-        <!--    			</li>-->
-
-        <!--                <li>-->
-        <!--      				&lt;!&ndash; SLIDE IMAGE &ndash;&gt;-->
-        <!--                    <div data-stellar-ratio="0.5" class="slide-image" style="background-image:url(images/anell.jpeg);">-->
-        <!--					</div>-->
-
-        <!--                    &lt;!&ndash; SLIDE OVERLAY &ndash;&gt;-->
-        <!--                    <div class="slide-overlay" style="opacity:0.2"> </div>-->
-        <!--    			</li>-->
 
 
     </ul><!-- END of MAIN SLIDER IMAGES -->
@@ -426,11 +398,135 @@
 
     </section>
 
+    <section id="main-slider" class="fixed-height">
+
+        <!-- MAIN SLIDER TITLE OUTTER WRAPPER -->
+        <div class="slide-title-outter-wrapper">
+
+            <!-- MAIN SLIDER TITLE INNER WRAPPER -->
+            <div class="slide-title-inner-wrapper">
+
+                <!-- TITLE 1  -->
+                <div class="slide-title align-middle">
+
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-md-offset-2 col-md-8">
+
+                                <div class="page-title">
+
+                                    <div style="padding-top:145px">
+                                        <h1 class="animation bounceInLeft">MASIA CAL RIERA</h1>
+                                        <a href="https://www.lobeswedding.com/location.html" class="de-button outline medium animation delay1 bounceInRight smooth-scroll">
+                                            ON ÉS?
+                                        </a>
+                                    </div>
+
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div><!-- END of MAIN SLIDER TITLE INNER WRAPPER -->
+
+        </div> <!-- END of MAIN SLIDER TITLE OUTTER WRAPPER -->
+
+        <!-- MAIN SLIDER IMAGES -->
+        <div class="slides">
+            <!-- SLIDE IMAGE -->
+            <div data-stellar-ratio="0.5" class="slide-image" style="background-image:url(images/taules_masia2.webp); background-position:center bottom">
+            </div>
+
+            <div class="slide-overlay"> </div>
+        </div>	<!-- END of MAIN SLIDER IMAGES -->
+
+    </section><!-- ENF of MAIN SLIDER -->
+
+    <div class="row">
+        <div class="col-md-offset-3 col-md-6 text-center" style="padding-top: 50px">
+
+            <div class="section-title">
+                <h2>PLAYLIST</h2>
+                <div class="heart-divider">
+                    <span class="grey-line"></span>
+                    <i class="de-icon-heart pink-heart"></i>
+                    <i class="de-icon-heart grey-heart"></i>
+                    <span class="grey-line"></span>
+                </div>
+                <p class="blurb">Quina cançó no hi pot faltar?</p>
+                <a href="https://open.spotify.com/playlist/5Sqr8eMqqo8VuWYImnqj4R?si=e9781d76a1924062&pt=edbf23c9fbc487a5ec744adcc414691a" class="de-button small">
+                    Comença a afegir-hi cançons!
+                </a>
+            </div>
+        </div>
+        <div class="col-md-offset-2 col-md-8 text-center" style="padding-bottom: 50px">
+            <iframe style="border-radius:12px" src="https://open.spotify.com/embed/playlist/5Sqr8eMqqo8VuWYImnqj4R?utm_source=generator" width="80%" height="380" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+        </div>
+    </div><!-- END of ICON TITLE -->
+
+
+    <!--CONTENT SECTION-->
+    <section id="content-travels" style="background-color: white">
+
+        <!-- CONTAINER-1 -->
+        <div class="container">
+
+            <!-- TITLE -->
+            <div class="row">
+                <div class="col-md-offset-3 col-md-6 text-center">
+
+                    <div class="page-title" style="padding-top: 50px">
+                        <h3>
+                            Ja sabeu que ens agrada molt voltar pel món...
+                        </h3>
+                        <p style="font-size: 16px">
+                            però encara tenim un continent per descobrir. </br>🔍🔍 T'imagines quin és?
+                        </p>
+                    </div>
+
+                </div>
+            </div><!-- END of TITLE -->
+
+            <h1 id="location_name"></h1>
+            <div id="map" style="width: 100%; margin-bottom: 50px"></div>
+        </div><!-- END of CONTAINER-1 -->
+
+    </section><!-- END OF CONTENT SECTION -->
+
+
+    <!--CONTENT SECTION-->
+    <section id="content-souvenir" style="background-color: white; margin-bottom: 40px">
+
+        <!-- CONTAINER -->
+        <div class="container">
+
+            <!-- ROW-2 -->
+            <div class="row">
+                <div class="col-md-offset-2 col-md-8 text-center animation fadeIn">
+                    <h3>PER AJUDAR-NOS A ARRIBAR A L'ALTRA PUNTA DEL MÓN... </h3>
+                    <p class="blurb">ES38 0049 4738 192 116 1583 03
+                    </p>
+                    <div class="heart-divider">
+                        <span class="grey-line"></span>
+                        <i class="de-icon-heart pink-heart"></i>
+                        <i class="de-icon-heart grey-heart"></i>
+                        <span class="grey-line"></span>
+                    </div>
+                </div>
+            </div>
+
+        </div> <!-- END of CONTAINER -->
+
+    </section> <!--END of CONTENT SECTION-->
 
 </section>
 
 <!-- FOOTER SECTION -->
 <footer>
+
     <div class="image-divider fixed-height" style="background-image:url(images/zanzibar.jpg);"
          data-stellar-background-ratio="0.5">
 

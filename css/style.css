@@ -1208,7 +1208,7 @@ img.with-border{
 /* ----------------------------------------------*/
 /* 07.1	Page Layout								 */
 /* ----------------------------------------------*/
-#content{
+#content, #content-souvenir{
 	position:relative;
 	background-color:#f6f6f6;
 }

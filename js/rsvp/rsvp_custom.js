@@ -21,7 +21,8 @@ document.querySelector("#mainada").addEventListener('click', function (event) {
 });
 
 submitButton.addEventListener("click", function() {
-    submitButton.style.backgroundColor = "#f0394d8c";
+    submitButton.style.backgroundColor = "rgba(7,132,145,0.55)";
+    submitButton.style.borderColor = "rgba(7,132,145,0.55)";
     submitButton.value = "ENVIANT...";
 });
 
@@ -58,13 +59,21 @@ async function sendEmail(data) {
         body: JSON.stringify(data)
     }).then((response) => {
         response.json()
-        // window.location.replace('https://www.lobeswedding.com')
-        submitButton.value = "Moltes gràcies!";
-        submitButton.style.backgroundColor = "#66c468";
-        submitButton.style.borderColor = "#66c468";
-        myForm.reset()
+        if(response.status === 200) {
+            submitButton.value = "Moltes gràcies!";
+            submitButton.style.backgroundColor = "#66c468";
+            submitButton.style.borderColor = "#66c468";
+            myForm.reset()
+        } else {
+            submitButton.value = "Hi ha hagut algun error";
+            submitButton.style.backgroundColor = "#e23737";
+            submitButton.style.borderColor = "#e23737";
+        }
 
     }).catch((error) => {
+        submitButton.value = "Hi ha hagut algun error";
+        submitButton.style.backgroundColor = "#e23737";
+        submitButton.style.borderColor = "#e23737";
         console.error("Error:", error);
     });
 

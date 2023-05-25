@@ -9,6 +9,18 @@ const submitButton = document.getElementById("submitButton");
 edat.addEventListener('input', () => {
     edatSelection = edat.value
 })
+submitButton.addEventListener("click", function() {
+    let valid = true;
+    $('[required]').each(function() {
+        if ($(this).is(':invalid') || !$(this).val()) valid = false;
+    })
+
+    if (valid) {
+        submitButton.style.backgroundColor = "rgba(7,132,145,0.55)";
+        submitButton.style.borderColor = "rgba(7,132,145,0.55)";
+        submitButton.value = "ENVIANT...";
+    }
+});
 
 document.querySelector("#mainada").addEventListener('click', function (event) {
     if (event.target && event.target.matches("input[type='radio']")) {
@@ -20,11 +32,8 @@ document.querySelector("#mainada").addEventListener('click', function (event) {
     }
 });
 
-submitButton.addEventListener("click", function() {
-    submitButton.style.backgroundColor = "rgba(7,132,145,0.55)";
-    submitButton.style.borderColor = "rgba(7,132,145,0.55)";
-    submitButton.value = "ENVIANT...";
-});
+
+
 
 myForm.addEventListener('submit', submitter);
 
@@ -45,7 +54,7 @@ function submitter(e) {
         vindrasBoda: vindrasBoda.value,
         quantsSereu: 1,
         mainada: mainada.value,
-        preferenciesAlimentaries: preferenciesAlimentaries.value,
+        preferenciesAlimentaries: preferenciesAlimentaries?.value,
         alergies: alergies?.value || "No",
         dormir: dormir?.value || "No",
         paella: paella?.value || "No"
